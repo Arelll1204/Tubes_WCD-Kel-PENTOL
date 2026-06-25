@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Savora — Rencanain Makanmu Sekarang</title>
+  <meta name="description" content="Pilih menu harian kamu, Savora langsung ngitung kalori, harga, dan status gizi — real-time, gratis selamanya.">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <svg class="savora-logo" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2ZM16 26C10.4772 26 6 21.5228 6 16C6 10.4772 10.4772 6 16 6C21.5228 6 26 10.4772 26 16C26 21.5228 21.5228 26 16 26Z" fill="#16a34a" fill-opacity="0.2"/>
+          <path d="M16 6C10.4772 6 6 10.4772 6 16C6 21.5228 10.4772 26 16 26C16 26 11 21 11 16C11 11 16 6 16 6Z" fill="#4ade80"/>
+          <path d="M16 6C21.5228 6 26 10.4772 26 16C26 21.5228 21.5228 26 16 26C16 26 21 21 21 16C21 11 16 6 16 6Z" fill="#16a34a"/>
+        </svg>
+        Savora
+      </a>
+      <div class="nav-links">
+        <a href="#cara-kerja">Cara Kerja</a>
+        <a href="#menu-favorit">Menu Pilihan</a>
+        <a href="#testimoni">Kata Mereka</a>
+        <a href="planner.html" class="btn-nav">Mulai Plan →</a>
+      </div>
+      <button class="burger" id="burger">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#cara-kerja">Cara Kerja</a>
+      <a href="#menu-favorit">Menu Pilihan</a>
+      <a href="#testimoni">Kata Mereka</a>
+      <a href="planner.html" class="btn-nav">Mulai Plan →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">✨ Gratis selamanya</div>
+      <h1>Makan enak,<br/><em>tetap seimbang.</em></h1>
+      <p class="hero-sub">Pilih menu yang kamu suka, Savora langsung ngitung kalori, harga, dan kasih tahu apakah gizimu udah lengkap — semuanya real-time.</p>
+      <div class="hero-cta">
+        <a href="planner.html" class="btn-primary">Coba Sekarang, Gratis →</a>
+        <a href="#cara-kerja" class="btn-ghost">Lihat cara kerjanya ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>12.400+</span><label>Menu direncanakan</label></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span>1.800+</span><label>Pengguna aktif</label></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span>26</span><label>Pilihan menu</label></div>
+      </div>
+      <div class="hero-visual">
+        <div class="food-card fc1">
+          <img class="food-card-img" src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=120&h=120&fit=crop&q=80" alt="Nasi Goreng" loading="lazy"/>
+          <span>Nasi Goreng<br/><small>450 kkal · Rp18.000</small></span>
+        </div>
+        <div class="food-card fc2">
+          <img class="food-card-img" src="https://images.unsplash.com/photo-1558030006-450675393462?w=120&h=120&fit=crop&q=80" alt="Beef Steak" loading="lazy"/>
+          <span>Beef Steak<br/><small>420 kkal · Rp45.000</small></span>
+        </div>
+        <div class="food-card fc3">
+          <img class="food-card-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=120&h=120&fit=crop&q=80" alt="Salad Sayur" loading="lazy"/>
+          <span>Salad Sayur<br/><small>80 kkal · Rp14.000</small></span>
+        </div>
+        <div class="food-card fc4">
+          <img class="food-card-img" src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=120&h=120&fit=crop&q=80" alt="Pisang" loading="lazy"/>
+          <span>Pisang<br/><small>105 kkal · Rp5.000</small></span>
+        </div>
+        <div class="food-card fc5">
+          <img class="food-card-img" src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=120&h=120&fit=crop&q=80" alt="Jus Alpukat" loading="lazy"/>
+          <span>Jus Alpukat<br/><small>230 kkal · Rp18.000</small></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILOSOFI SAVORA -->
+  <section class="philosophy">
+    <div class="section-inner philosophy-inner">
+      <div class="section-label">Arti Nama Savora</div>
+      <h2>Menikmati makanan, dengan aura sehat.</h2>
+      <p class="section-sub">Savora bukan sekadar nama, melainkan gabungan visi kami tentang cara terbaik menikmati gaya hidup sehat.</p>
+      
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <div class="philosophy-icon">Savor</div>
+          <h3>Menikmati Sepenuhnya</h3>
+          <p>Merasakan tiap suapan dengan perlahan dan penuh apresiasi. Karena makanan sehat harus tetap lezat dan bisa dinikmati tanpa rasa bersalah.</p>
+        </div>
+        <div class="philosophy-card">
+          <div class="philosophy-icon">Aura</div>
+          <h3>Elegan & Natural</h3>
+          <p>Membawa kesan modern, ramah, dan memancarkan energi positif dari panduan gizi seimbang yang segar dari alam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARA KERJA -->
+  <section class="cara-kerja" id="cara-kerja">
+    <div class="section-inner">
+      <div class="section-label">Cara Kerja</div>
+      <h2>Semudah centang, langsung keliatan hasilnya</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Lihat daftar menunya</h3>
+          <p>Ada 26 menu lengkap — dari nasi, lauk, sayur, buah, sampai minuman. Semuanya udah ada info kalori dan harganya.</p>
+        </div>
+        <div class="step-connector">→</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Centang yang kamu mau</h3>
+          <p>Tinggal centang menu pilihanmu. Ga ada yang salah di sini — pilih sesuai selera dan budget-mu.</p>
+        </div>
+        <div class="step-connector">→</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Lihat hasilnya langsung</h3>
+          <p>Total kalori, total harga, dan status gizi langsung keliatan tanpa perlu reload halaman.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU FAVORIT -->
+  <section class="menu-favorit" id="menu-favorit">
+    <div class="section-inner">
+      <div class="section-label">Menu Populer</div>
+      <h2>Favorit pengguna Savora</h2>
+      <p class="section-sub">Ini beberapa menu yang paling sering dipilih. Cek semuanya di halaman Planner.</p>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&h=320&fit=crop&q=85" alt="Nasi Goreng Spesial" loading="lazy"/>
+          <div class="menu-card-body">
+            <div class="menu-info">
+              <h4>Nasi Goreng Spesial</h4>
+              <span class="tag tag-pokok">Makanan Pokok</span>
+              <div class="menu-meta"><span class="cal">450 kkal</span><span class="price">Rp 18.000</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&h=320&fit=crop&q=85" alt="Rendang Daging Sapi" loading="lazy"/>
+          <div class="menu-card-body">
+            <div class="menu-info">
+              <h4>Rendang Daging Sapi</h4>
+              <span class="tag tag-lauk">Lauk-Pauk</span>
+              <div class="menu-meta"><span class="cal">380 kkal</span><span class="price">Rp 32.000</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&h=320&fit=crop&q=85" alt="Tumis Kangkung" loading="lazy"/>
+          <div class="menu-card-body">
+            <div class="menu-info">
+              <h4>Tumis Kangkung</h4>
+              <span class="tag tag-sayur">Sayur</span>
+              <div class="menu-meta"><span class="cal">90 kkal</span><span class="price">Rp 9.000</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=600&h=320&fit=crop&q=85" alt="Pisang" loading="lazy"/>
+          <div class="menu-card-body">
+            <div class="menu-info">
+              <h4>Pisang (1 buah)</h4>
+              <span class="tag tag-buah">Buah</span>
+              <div class="menu-meta"><span class="cal">105 kkal</span><span class="price">Rp 5.000</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&h=320&fit=crop&q=85" alt="Jus Alpukat" loading="lazy"/>
+          <div class="menu-card-body">
+            <div class="menu-info">
+              <h4>Jus Alpukat</h4>
+              <span class="tag tag-minum">Minuman</span>
+              <div class="menu-meta"><span class="cal">230 kkal</span><span class="price">Rp 18.000</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=320&fit=crop&q=85" alt="Gado-Gado" loading="lazy"/>
+          <div class="menu-card-body">
+            <div class="menu-info">
+              <h4>Gado-Gado</h4>
+              <span class="tag tag-sayur">Sayur</span>
+              <div class="menu-meta"><span class="cal">280 kkal</span><span class="price">Rp 16.000</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="center-cta">
+        <a href="planner.html" class="btn-primary">Lihat 26 menu lengkapnya →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FITUR -->
+  <section class="fitur">
+    <div class="section-inner">
+      <div class="section-label">Yang kamu dapat</div>
+      <h2>Lebih dari sekadar daftar makanan</h2>
+      <div class="fitur-grid">
+        <div class="fitur-item">
+          <div class="fitur-icon">⚡</div>
+          <h3>Update seketika</h3>
+          <p>Centang atau hapus menu, hasilnya langsung berubah. Ga perlu pencet tombol apapun.</p>
+        </div>
+        <div class="fitur-item">
+          <div class="fitur-icon">🏷️</div>
+          <h3>Harga transparan</h3>
+          <p>Semua harga menu udah tertera. Total belanjaan langsung keitung otomatis.</p>
+        </div>
+        <div class="fitur-item">
+          <div class="fitur-icon">🎯</div>
+          <h3>Cek gizi lengkap</h3>
+          <p>Sistem langsung kasih tahu kalau menu pilihanmu belum ada kategori tertentu.</p>
+        </div>
+        <div class="fitur-item">
+          <div class="fitur-icon">🏆</div>
+          <h3>Badge Menu Seimbang</h3>
+          <p>Kalau udah pilih dari semua 5 kategori, dapet badge spesial "Menu Seimbang!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <section class="testimoni" id="testimoni">
+    <div class="section-inner">
+      <div class="section-label">Kata Mereka</div>
+      <h2>Yang udah pakai Savora bilang begini</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Akhirnya ada yang bantu aku ngitung kalori tanpa ribet. Biasanya aku buka 3 tab berbeda, sekarang satu halaman aja cukup!"</p>
+          <div class="testi-author">
+            <div class="avatar">DK</div>
+            <div>
+              <strong>Dinda Kusuma</strong>
+              <small>Mahasiswi, Bandung</small>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Suka banget fitur badge Menu Seimbang-nya. Jadi kayak ada tantangan kecil buat mastiin makan aku lengkap tiap hari."</p>
+          <div class="testi-author">
+            <div class="avatar">RP</div>
+            <div>
+              <strong>Rizky Pratama</strong>
+              <small>Karyawan, Jakarta</small>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <p>"Pas lagi diet, ini banget yang aku butuhin. Langsung keliatan kalau kalori udah over. Simple tapi berguna banget."</p>
+          <div class="testi-author">
+            <div class="avatar">SA</div>
+            <div>
+              <strong>Sari Amalia</strong>
+              <small>Ibu rumah tangga, Surabaya</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAWAH -->
+  <section class="cta-bottom">
+    <div class="section-inner cta-inner">
+      <h2>Yuk, mulai rencanain makanmu sekarang!</h2>
+      <p>Gratis, ga perlu daftar, langsung bisa dipakai.</p>
+      <a href="planner.html" class="btn-primary btn-large">Buka Menu Planner →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="logo">
+        <svg class="savora-logo" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2ZM16 26C10.4772 26 6 21.5228 6 16C6 10.4772 10.4772 6 16 6C21.5228 6 26 10.4772 26 16C26 21.5228 21.5228 26 16 26Z" fill="#16a34a" fill-opacity="0.2"/>
+          <path d="M16 6C10.4772 6 6 10.4772 6 16C6 21.5228 10.4772 26 16 26C16 26 11 21 11 16C11 11 16 6 16 6Z" fill="#4ade80"/>
+          <path d="M16 6C21.5228 6 26 10.4772 26 16C26 21.5228 21.5228 26 16 26C16 26 21 21 21 16C21 11 16 6 16 6Z" fill="#16a34a"/>
+        </svg>
+        Savora
+      </a>
+      <p>Dibuat dengan ❤️ untuk hidup yang lebih sehat</p>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>

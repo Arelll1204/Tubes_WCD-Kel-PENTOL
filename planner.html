@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu Planner — Savora</title>
+  <meta name="description" content="Pilih menu harian kamu dan lihat total kalori, harga, dan status gizi secara real-time.">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="planner-page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <svg class="savora-logo" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2ZM16 26C10.4772 26 6 21.5228 6 16C6 10.4772 10.4772 6 16 6C21.5228 6 26 10.4772 26 16C26 21.5228 21.5228 26 16 26Z" fill="#16a34a" fill-opacity="0.2"/>
+          <path d="M16 6C10.4772 6 6 10.4772 6 16C6 21.5228 10.4772 26 16 26C16 26 11 21 11 16C11 11 16 6 16 6Z" fill="#4ade80"/>
+          <path d="M16 6C21.5228 6 26 10.4772 26 16C26 21.5228 21.5228 26 16 26C16 26 21 21 21 16C21 11 16 6 16 6Z" fill="#16a34a"/>
+        </svg>
+        Savora
+      </a>
+      <div class="nav-links">
+        <a href="index.html">← Kembali ke Beranda</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="planner-layout">
+
+    <!-- KIRI: TABEL -->
+    <main class="planner-main">
+      <div class="planner-header">
+        <h1>Planner Menu</h1>
+        <p>Centang menu yang kamu mau makan hari ini. Semua langsung keitung di panel sebelah kanan.</p>
+      </div>
+
+      <!-- FILTER -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="Semua">Semua</button>
+        <button class="filter-btn" data-filter="Makanan Pokok">Pokok</button>
+        <button class="filter-btn" data-filter="Lauk-Pauk">Lauk-Pauk</button>
+        <button class="filter-btn" data-filter="Sayur">Sayur</button>
+        <button class="filter-btn" data-filter="Buah">Buah</button>
+        <button class="filter-btn" data-filter="Minuman">Minuman</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="menu-table" id="menuTable">
+          <thead>
+            <tr>
+              <th>Menu</th>
+              <th>Kategori</th>
+              <th class="text-right">Kalori</th>
+              <th class="text-right">Harga</th>
+              <th class="text-center">Pilih</th>
+            </tr>
+          </thead>
+          <tbody id="menuBody">
+            <!-- diisi JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pilih-hint" id="pilihHint">
+        <span id="selectedCount">0</span> menu dipilih · Geser ke kanan untuk lihat hasil →
+      </div>
+    </main>
+
+    <!-- KANAN: PANEL HASIL -->
+    <aside class="panel-hasil" id="panelHasil">
+      <div class="panel-header">
+        <h2>Hasil Pilihanmu</h2>
+      </div>
+
+      <!-- STATE KOSONG -->
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">🍽️</div>
+        <p><strong>Belum ada menu dipilih</strong></p>
+        <p class="empty-sub">Centang menu di sebelah kiri buat mulai ngerencanain makanmu.</p>
+      </div>
+
+      <!-- ISI PANEL -->
+      <div class="panel-content" id="panelContent" style="display:none">
+
+        <!-- STACK FOTO -->
+        <div class="panel-section">
+          <div class="panel-label">Menu yang dipilih</div>
+          <div class="img-stack" id="imgStack"></div>
+        </div>
+
+        <!-- TOTAL -->
+        <div class="panel-section totals">
+          <div class="total-box">
+            <div class="total-label">Total Kalori</div>
+            <div class="total-value" id="totalKalori">0 <span>kkal</span></div>
+          </div>
+          <div class="total-box">
+            <div class="total-label">Total Harga</div>
+            <div class="total-value" id="totalHarga">Rp 0</div>
+          </div>
+        </div>
+
+        <!-- KATEGORI -->
+        <div class="panel-section">
+          <div class="panel-label">Kelengkapan Gizi</div>
+          <div class="kategori-list" id="kategoriList">
+            <div class="kategori-item" data-kat="Makanan Pokok">
+              <span class="kat-icon" id="kat-icon-Makanan Pokok">○</span>
+              <span>Makanan Pokok</span>
+              <span class="kat-status" id="kat-status-Makanan Pokok">Belum ada</span>
+            </div>
+            <div class="kategori-item" data-kat="Lauk-Pauk">
+              <span class="kat-icon" id="kat-icon-Lauk-Pauk">○</span>
+              <span>Lauk-Pauk</span>
+              <span class="kat-status" id="kat-status-Lauk-Pauk">Belum ada</span>
+            </div>
+            <div class="kategori-item" data-kat="Sayur">
+              <span class="kat-icon" id="kat-icon-Sayur">○</span>
+              <span>Sayur</span>
+              <span class="kat-status" id="kat-status-Sayur">Belum ada</span>
+            </div>
+            <div class="kategori-item" data-kat="Buah">
+              <span class="kat-icon" id="kat-icon-Buah">○</span>
+              <span>Buah</span>
+              <span class="kat-status" id="kat-status-Buah">Belum ada</span>
+            </div>
+            <div class="kategori-item" data-kat="Minuman">
+              <span class="kat-icon" id="kat-icon-Minuman">○</span>
+              <span>Minuman</span>
+              <span class="kat-status" id="kat-status-Minuman">Belum ada</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BADGE -->
+        <div class="badge-seimbang" id="badgeSeimbang" style="display:none">
+          <div class="badge-inner">
+            <span class="badge-emoji">🏆</span>
+            <div>
+              <strong>Menu Seimbang!</strong>
+              <p>Semua 5 kategori gizi udah terpenuhi. Pilihan yang oke!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESET -->
+        <button class="btn-reset" id="btnReset">Hapus semua pilihan</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- MOBILE: TOMBOL LIHAT HASIL -->
+  <button class="fab-result" id="fabResult" style="display:none">
+    Lihat hasil (<span id="fabCount">0</span>)
+  </button>
+
+  <!-- MOBILE BOTTOM SHEET -->
+  <div class="bottom-sheet-overlay" id="bsOverlay" style="display:none"></div>
+  <div class="bottom-sheet" id="bottomSheet" style="display:none">
+    <div class="bs-handle"></div>
+    <button class="bs-close" id="bsClose">✕ Tutup</button>
+    <div id="bsContent"><!-- Mirror panel content for mobile --></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
