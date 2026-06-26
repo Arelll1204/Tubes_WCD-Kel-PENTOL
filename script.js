@@ -258,6 +258,7 @@ function updatePanel() {
   if (count === 0) {
     emptyState.style.display = "block";
     panelContent.style.display = "none";
+    updateBottomSheet();
     return;
   }
 
@@ -319,14 +320,14 @@ filterBtns.forEach(btn => {
 // ========================
 // RESET
 // ========================
-if (btnReset) {
-  btnReset.addEventListener("click", () => {
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".btn-reset")) {
     selectedIds.clear();
     saveToStorage(); // hapus dari localStorage juga
     renderTable(currentFilter);
     updatePanel();
-  });
-}
+  }
+});
 
 // ========================
 // MOBILE BOTTOM SHEET
