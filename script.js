@@ -131,29 +131,8 @@ const TAG_LABEL = {
   "Minuman":       "Minuman",
 };
 
-// ========================
-// LOCALSTORAGE PERSISTENCE
-// ========================
-const LS_KEY = "savora_selected";
-
-function loadFromStorage() {
-  try {
-    const saved = localStorage.getItem(LS_KEY);
-    return saved ? new Set(JSON.parse(saved)) : new Set();
-  } catch {
-    return new Set();
-  }
-}
-
-function saveToStorage() {
-  try {
-    localStorage.setItem(LS_KEY, JSON.stringify([...selectedIds]));
-  } catch {}
-}
-
-// STATE — restored dari localStorage otomatis
-let selectedIds = loadFromStorage();
-let currentFilter = "Semua";
+// STATE
+let selectedIds = new Set();
 
 // ELEMENTS
 const menuBody      = document.getElementById("menuBody");
@@ -177,14 +156,10 @@ const pilihHint     = document.getElementById("pilihHint");
 // ========================
 // RENDER TABEL
 // ========================
-function renderTable(filter = "Semua") {
-  const filtered = filter === "Semua"
-    ? menuData
-    : menuData.filter(m => m.kategori === filter);
-
+function renderTable() {
   menuBody.innerHTML = "";
 
-  filtered.forEach(menu => {
+  menuData.forEach(menu => {
     const isChecked = selectedIds.has(menu.id);
     const tr = document.createElement("tr");
     if (isChecked) tr.classList.add("selected");
@@ -192,12 +167,12 @@ function renderTable(filter = "Semua") {
 
     tr.innerHTML = `
       <td>
-        <div class="menu-img-cell">
-          <div class="menu-thumb">
-            <img src="${menu.img}" alt="${menu.nama}" loading="lazy" onerror="this.parentElement.textContent='🍽️'"/>
-          </div>
-          <span class="menu-name">${menu.nama}</span>
+        <div class="menu-thumb">
+          <img src="${menu.img}" alt="${menu.nama}" loading="lazy" onerror="this.parentElement.textContent='🍽️'"/>
         </div>
+      </td>
+      <td>
+        <span class="menu-name">${menu.nama}</span>
       </td>
       <td>
         <span class="tag ${TAG_CLASS[menu.kategori]}">${TAG_LABEL[menu.kategori]}</span>
@@ -239,7 +214,6 @@ function handleCheckbox(e) {
     tr.classList.remove("selected");
   }
 
-  saveToStorage(); // simpan ke localStorage
   updatePanel();
 }
 
@@ -305,17 +279,7 @@ function updatePanel() {
   updateBottomSheet();
 }
 
-// ========================
-// FILTER
-// ========================
-filterBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    filterBtns.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    currentFilter = btn.dataset.filter;
-    renderTable(currentFilter);
-  });
-});
+
 
 // ========================
 // RESET
@@ -323,8 +287,7 @@ filterBtns.forEach(btn => {
 document.addEventListener("click", (e) => {
   if (e.target.closest(".btn-reset")) {
     selectedIds.clear();
-    saveToStorage(); // hapus dari localStorage juga
-    renderTable(currentFilter);
+    renderTable();
     updatePanel();
   }
 });

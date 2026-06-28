@@ -1,4 +1,4 @@
-# 🍱 NutriPlan — Menu Planner
+# 🍱 Savora — Smart Menu Planner
 
 > Tugas Besar Web Client Development — Kelompok 3
 
