@@ -7,111 +7,111 @@ const menuData = [
   // MAKANAN POKOK
   {
     id: 1, nama: "Nasi Putih", kategori: "Makanan Pokok", kalori: 180, harga: 5000,
-    img: "https://images.unsplash.com/photo-1516684732162-798a0062be99?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Nasi putih.jpeg"
   },
   {
     id: 2, nama: "Nasi Goreng Spesial", kategori: "Makanan Pokok", kalori: 450, harga: 18000,
-    img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Nasi Goreng Spesial.jpg"
   },
   {
     id: 3, nama: "Mie Goreng Jawa", kategori: "Makanan Pokok", kalori: 380, harga: 16000,
-    img: "https://images.unsplash.com/photo-1534482421-64566f976cfa?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Mie-goreng-jawa.jpg"
   },
   {
     id: 4, nama: "Spaghetti Aglio Olio", kategori: "Makanan Pokok", kalori: 420, harga: 28000,
-    img: "https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Spaghetti Aglio Olio.jpg"
   },
   {
     id: 5, nama: "Kentang Panggang", kategori: "Makanan Pokok", kalori: 220, harga: 15000,
-    img: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Kentang Panggang.jpeg"
   },
   {
     id: 6, nama: "Roti Gandum (2 lembar)", kategori: "Makanan Pokok", kalori: 160, harga: 8000,
-    img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Roti Gandum.jpg"
   },
   // LAUK-PAUK
   {
     id: 7, nama: "Ayam Goreng Tepung", kategori: "Lauk-Pauk", kalori: 300, harga: 17000,
-    img: "https://images.unsplash.com/photo-1562967914-608f82629710?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Ayam Goreng Tepung.jpg"
   },
   {
     id: 8, nama: "Ayam Bakar Madu", kategori: "Lauk-Pauk", kalori: 280, harga: 20000,
-    img: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Ayam Bakar Madu.jpg"
   },
   {
     id: 9, nama: "Rendang Daging Sapi", kategori: "Lauk-Pauk", kalori: 380, harga: 32000,
-    img: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Rendang daging sapi.jpg"
   },
   {
     id: 10, nama: "Tempe Orek", kategori: "Lauk-Pauk", kalori: 150, harga: 8000,
-    img: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Tempe Orek.jpg"
   },
   {
     id: 11, nama: "Tahu Goreng", kategori: "Lauk-Pauk", kalori: 120, harga: 6000,
-    img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Tahu Goreng.jpg"
   },
   {
     id: 12, nama: "Ikan Nila Bakar", kategori: "Lauk-Pauk", kalori: 250, harga: 22000,
-    img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Ikan Nila Bakar.jpg"
   },
   {
     id: 13, nama: "Telur Dadar", kategori: "Lauk-Pauk", kalori: 190, harga: 7000,
-    img: "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Terlur Dadar.jpg"
   },
   {
     id: 14, nama: "Beef Steak Sirloin", kategori: "Lauk-Pauk", kalori: 420, harga: 45000,
-    img: "https://images.unsplash.com/photo-1558030006-450675393462?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Beef Steak Sirloin.jpg"
   },
   // SAYUR
   {
     id: 15, nama: "Tumis Kangkung", kategori: "Sayur", kalori: 90, harga: 9000,
-    img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Tumis Kangkung.jpg"
   },
   {
     id: 16, nama: "Sayur Asem", kategori: "Sayur", kalori: 70, harga: 8000,
-    img: "https://images.unsplash.com/photo-1547592180-85f173990554?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Sayur Asem.jpg"
   },
   {
     id: 17, nama: "Capcay Kuah", kategori: "Sayur", kalori: 110, harga: 13000,
-    img: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Capcay Kuah.jpg"
   },
   {
     id: 18, nama: "Salad Sayur Segar", kategori: "Sayur", kalori: 80, harga: 14000,
-    img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Salad Sayur Segar.jpg"
   },
   {
     id: 19, nama: "Gado-Gado", kategori: "Sayur", kalori: 280, harga: 16000,
-    img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/gado gado.jpg"
   },
   // BUAH
   {
     id: 20, nama: "Pisang (1 buah)", kategori: "Buah", kalori: 105, harga: 5000,
-    img: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Pisang.jpg"
   },
   {
     id: 21, nama: "Apel Fuji (1 buah)", kategori: "Buah", kalori: 95, harga: 7000,
-    img: "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Apel Fuji.jpg"
   },
   {
     id: 22, nama: "Semangka (1 potong)", kategori: "Buah", kalori: 60, harga: 6000,
-    img: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Semangka.jpg"
   },
   {
     id: 23, nama: "Fruit Salad Cup", kategori: "Buah", kalori: 140, harga: 17000,
-    img: "https://images.unsplash.com/photo-1564093497595-593b96d80180?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Fruit Salad Cup.jpg"
   },
   // MINUMAN
   {
     id: 24, nama: "Es Teh Manis", kategori: "Minuman", kalori: 90, harga: 5000,
-    img: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Es Teh Manis.jpg"
   },
   {
     id: 25, nama: "Air Mineral 600ml", kategori: "Minuman", kalori: 0, harga: 4000,
-    img: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Air Mineral 600ml.jpg"
   },
   {
     id: 26, nama: "Jus Alpukat", kategori: "Minuman", kalori: 230, harga: 18000,
-    img: "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=120&h=120&fit=crop&q=80"
+    img: "Menu Pict/Jus Alpukat.jpg"
   },
 ];
 
